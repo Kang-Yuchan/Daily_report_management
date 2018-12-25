@@ -5,7 +5,7 @@
     <c:param name="content">
         <c:choose>
             <c:when test="${employee != null}">
-                <h2>Code No.{employee.id} Page </h2>
+                <h2>Code No.${employee.code} Page </h2>
 
                 <table>
                     <tbody>
