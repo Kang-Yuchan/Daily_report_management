@@ -11,7 +11,21 @@
     <body>
         <div id="wrapper">
             <div id="header">
-                <h1>Daily Report Management</h1>
+                <div id="header_menu">
+                    <h1><a href="<c:url value='/' />">Daily Report Management</a></h1>&nbsp;&nbsp;&nbsp;
+                    <c:if test="${sessionScope.login_employee != null}">
+                        <c:if test="${sessionScope.login_employee.admin_flag == 1}">
+                            <a href="<c:url value='/employees/index' />">Management employees</a>&nbsp;
+                        </c:if>
+                        <a href="<c:url value='/reports/index' />">Daily Report Management</a>&nbsp;
+                    </c:if>
+                </div>
+                <c:if test="${sessionScope.login_employee != null}">
+                    <div id="employee_name">
+                        <c:out value="${sessionScope.login_employee.name}" />&nbsp;sir&nbsp;&nbsp;&nbsp;
+                        <a href="<c:url value='/logout' />">Log out</a>
+                    </div>
+                </c:if>
             </div>
             <div id="content">
                 ${param.content}

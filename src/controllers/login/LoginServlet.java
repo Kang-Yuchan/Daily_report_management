@@ -88,7 +88,7 @@ public class LoginServlet extends HttpServlet {
         } else {
             request.getSession().setAttribute("login_employee", e);
 
-            request.getSession().setAttribute("flush", "Log in!");
+            request.getSession().setAttribute("flush", "Log in");
             response.sendRedirect(request.getContextPath() + "/");
         }
     }
