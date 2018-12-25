@@ -47,7 +47,7 @@
                 </c:choose>
             </c:forEach>
         </div>
-        <p><a href="<c:url value='/employees/new' />">Resist new employee</a></p>
+        <p><a href="<c:url value='/employees/new' />">Resister new employee</a></p>
 
     </c:param>
 </c:import>
